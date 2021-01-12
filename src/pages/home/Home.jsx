@@ -8,11 +8,21 @@ import TopicsToFollow from "../../components/TopicsToFollow/TopicsToFollow";
 import articles from "./articles.json";
 import "./styles.scss";
 
-
 export default class Home extends Component {
   state = {
     articles: articles,
   };
+
+  getData = async () => {
+    try {
+      const response = await fetch("", {
+        method: "GET",
+      });
+    } catch (error) {}
+  };
+
+  componentDidMount = () => {};
+
   render() {
     return (
       <div>
@@ -42,7 +52,7 @@ export default class Home extends Component {
 
             <Col>
               <PeopleList />
-              <TopicsToFollow/>
+              <TopicsToFollow />
             </Col>
             <Col className={""}>{/*<TagsList />*/}</Col>
           </Row>
