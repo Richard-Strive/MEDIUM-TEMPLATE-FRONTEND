@@ -49,6 +49,7 @@ export default class Home extends Component {
                   article={articles[0]}
                   articleImg={"top"}
                   headingFont={"large"}
+                  src={articles[0]}
                   subheading
                 />
               </Col>

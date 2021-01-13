@@ -3,7 +3,8 @@ import ArticleItemDetails from "../ArticleItemDetails/ArticleItemDetails";
 import "./styles.scss";
 class ArticleListItem extends React.Component {
   render() {
-    const { article } = this.props;
+    const { article, src } = this.props;
+
     return (
       <div
         className={`w-100 d-flex mb-auto justify-content-between align-start  pb-4 ${
@@ -18,7 +19,11 @@ class ArticleListItem extends React.Component {
               className={
                 this.props.articleImg === "top" ? "img-large" : "img-small"
               }
-              src={article.cover}
+              src={
+                src
+                  ? `https://source.unsplash.com/random/house`
+                  : `${article.author.img}`
+              }
             />
           </a>
         )}
